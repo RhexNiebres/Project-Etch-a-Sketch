@@ -1,6 +1,45 @@
-.cell {
-  border: 1px solid gray;
-  min-width: 10px;
-  min-height: 20px;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+#gridButton {
+  background-color: #04aa6d;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
   display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  align-items: center;
+  max-width: 960px;
+  border-radius: 8px;
+}
+
+.gridRow {
+  display: flex;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.cell:hover,
+.cell.active {
+  background-color: lightblue;
 }
