@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Etch-a-Sketch</title>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script>
+      const container = document.getElementById("container");
+
+      function defualtGrid() {
+        makeRows(16);
+      }
+
+      function makeRows(rowNum) {
+        for (let r = 0; r < rowNum; r++) {
+          let row = document.createElement("div"); //create new elemt
+          row.className = "gridRow"; //this is how to put class
+        }
+
+        for (let c = 0; c < rowNum; c++) {
+          let newCell = document.createElement("div");
+          newCell.className = "cell";
+          row.appendchild(newCell);
+        }
+
+        container.appendChild(row);
+      }
+
+      defualtGrid();
+    </script>
+  </body>
+</html>
