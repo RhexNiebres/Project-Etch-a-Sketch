@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   display: flex;
   justify-content: center;
@@ -6,6 +9,8 @@ body {
   margin: 0;
   flex-direction: column;
   background-color: #1b2f55;
+  padding: 0;
+  overflow: hidden;
 }
 #gridButton {
   background-color: #ffd376;
@@ -18,28 +23,32 @@ body {
   font-size: 16px;
   cursor: pointer;
   margin-bottom: 10px;
+  justify-content: center;
 }
 #container {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
   align-items: center;
-  max-width: 960px;
-  gap: 1px;
+  width: 960px;
+  padding: 0;
+  height: 960px;
+  min-width: 960px;
+  min-height: 960px;
 }
 
 .gridRow {
   display: flex;
+  width: 100%;
 }
 
 .cell {
-  width: 20px;
-  height: 20px;
   border: 1px solid black;
-  box-sizing: border-box;
   background-color: white;
   transition: background-color 0.3s;
   border-radius: 3px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
 }
 
 /*

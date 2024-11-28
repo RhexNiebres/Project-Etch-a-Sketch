@@ -36,6 +36,7 @@
             let newCell = document.createElement("div");
             newCell.className = "cell";
             row.appendChild(newCell);
+
             //evenlistener that acts like a pen
             newCell.addEventListener("mouseenter", function () {
               newCell.style.backgroundColor = getRandomColor();
@@ -45,6 +46,7 @@
           container.appendChild(row);
         }
       }
+
       //random rgb color
       function getRandomColor() {
         const r = Math.floor(Math.random() * 255);
