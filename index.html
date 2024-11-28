@@ -7,31 +7,53 @@
     <title>Etch-a-Sketch</title>
   </head>
   <body>
+    <button id="gridButton">push me</button>
     <div id="container"></div>
 
     <script>
       const container = document.getElementById("container");
+      const gridButton = document.getElementById("gridButton");
 
-      function defualtGrid() {
-        makeRows(16);
+      function clearGrid() {
+        //claer existing grid
+        while (container.firstChild) {
+          container.removeChild(container.firstChild);
+        }
+      }
+
+      //
+      function defaultGrid(size) {
+        clearGrid();
+        makeRows(size);
       }
 
       function makeRows(rowNum) {
         for (let r = 0; r < rowNum; r++) {
-          let row = document.createElement("div"); //create new elemt
+          let row = document.createElement("div"); //create new element for row
           row.className = "gridRow"; //this is how to put class
-        }
 
-        for (let c = 0; c < rowNum; c++) {
-          let newCell = document.createElement("div");
-          newCell.className = "cell";
-          row.appendchild(newCell);
-        }
+          for (let c = 0; c < rowNum; c++) {
+            let newCell = document.createElement("div");
+            newCell.className = "cell";
+            row.appendChild(newCell);
+          }
 
-        container.appendChild(row);
+          container.appendChild(row);
+        }
       }
 
-      defualtGrid();
+      gridButton.addEventListener("click", function () {
+        const userInput = prompt("Enter grid size (1-100 for grid size):");
+        const gridSize = parseInt(userInput);
+
+        if (!isNaN(gridSize) && gridSize > 0 && gridSize <= 100) {
+          defaultGrid(gridSize);
+        } else {
+          alert("Please enter a valid positive number between 1 and 100.");
+        }
+      });
+
+      defaultGrid(16);
     </script>
   </body>
 </html>
