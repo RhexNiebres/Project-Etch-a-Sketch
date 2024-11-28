@@ -1,16 +1,16 @@
-Create a webpage with a 16x16 grid of square divs.
-Create the divs using JavaScript.
+# Etch-a-Sketch
 
-Don’t try to create them by hand by copying and pasting them in your HTML file!
-It’s best to put your grid squares inside a “container” div. This div can be written in your HTML file.
+## Overview
 
-Use Flexbox to make the divs appear as a grid (versus just one on each line). Despite the name, do not be tempted to research or use CSS Grid,
-as it will be taught in a later lesson after the foundations path. This project is an opportunity specifically to practice Flexbox!
-Be careful with borders and margins, as they can adjust the size of the squares!
+Etch-a-Sketch is a drawing game that allows users to create artworks on a grid. With the ability to customize the grid size, users can dynamically create drawings by hovering over the grid cells, which change color on interaction.
 
-“OMG, why isn’t my grid being created???”
-Did you link your CSS stylesheet?
-Open your browser’s developer tools.
-Check if there are any errors in the JavaScript console.
-Check your “elements” panel to see if the elements have actually shown up but are somehow hidden.
-Go willy-nilly and add console.log statements in your JavaScript to see if it’s actually being loaded.
+## Features
+
+- **Grid Creation**: Users can input the number of squares they want along each side of the grid (1 to 100).
+- **Interactive Drawing**: Cells change color when hovered over, allowing users to create designs by dragging the mouse across the grid.
+
+## Technologies Used
+
+- **HTML**: For structuring the webpage.
+- **CSS**: For styling the elements and layout.
+- **JavaScript**: For implementing the interactive grid functionalities.
