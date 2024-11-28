@@ -5,11 +5,13 @@ body {
   height: 100vh;
   margin: 0;
   flex-direction: column;
+  background-color: #1b2f55;
 }
 #gridButton {
-  background-color: #04aa6d;
-  border: none;
-  color: white;
+  background-color: #ffd376;
+  border: solid black 5px;
+  border-radius: 15px;
+  color: black;
   padding: 15px 32px;
   text-decoration: none;
   display: inline-block;
@@ -23,7 +25,7 @@ body {
   margin-top: 20px;
   align-items: center;
   max-width: 960px;
-  border-radius: 8px;
+  gap: 1px;
 }
 
 .gridRow {
@@ -37,9 +39,12 @@ body {
   box-sizing: border-box;
   background-color: white;
   transition: background-color 0.3s;
+  border-radius: 3px;
 }
 
+/*
 .cell:hover,
 .cell.active {
-  background-color: lightblue;
+  background-color: #1c3252;
 }
+  */
